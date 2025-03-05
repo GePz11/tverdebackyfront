@@ -2,6 +2,9 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, TouchableOpacity, FlatList, Modal, Dimensions, SafeAreaView } from 'react-native';
 import { useState } from 'react';
 
+
+
+
 // Datos de ejemplo de productos
 const products = [
   { id: '1', name: 'EJ1', price: 'Disponible', image: 'https://www.esneca.lat/wp-content/uploads/tipos-de-frutas-1.jpg' },
@@ -10,6 +13,10 @@ const products = [
   { id: '4', name: 'EJ4', price: 'Disponible', image: 'https://www.esneca.lat/wp-content/uploads/tipos-de-frutas-1.jpg' },
 ];
 
+//particion de la aplicacion para prueba de ventana
+
+
+// fin del codigo de prueba
 export default function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [menuVisible, setMenuVisible] = useState(false);
@@ -18,18 +25,35 @@ export default function App() {
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
   };
+  //ejemplo
+
+  //ejemplo
 
   const toggleMenu = () => {
     setMenuVisible(!menuVisible);
   };
 
   const renderProduct = ({ item }) => (
+    /*
     <View style={[styles.productCard, darkMode && styles.darkCard]}>
       <Image source={{ uri: item.image }} style={styles.productImage} />
       <Text style={[styles.productName, darkMode && styles.darkText]}>{item.name}</Text>
       <Text style={[styles.productPrice, darkMode && styles.darkText]}>{item.price}</Text>
     </View>
+    */
+    <TouchableOpacity 
+    style={[styles.productCard, darkMode && styles.darkCard]}
+    onPress={() => alert(`Has seleccionado: ${item.name}`)} // Acción al presionar
+  >
+    <Image source={{ uri: item.image }} style={styles.productImage} />
+    <Text style={[styles.productName, darkMode && styles.darkText]}>{item.name}</Text>
+    <Text style={[styles.productPrice, darkMode && styles.darkText]}>{item.price}</Text>
+  </TouchableOpacity>
+  
   );
+  //ejemplo
+
+  //ejemplo
 
   const renderStars = (reputation) => {
     let stars = [];
@@ -114,6 +138,7 @@ export default function App() {
         contentContainerStyle={styles.productList}
       />
 
+      
       <StatusBar style={darkMode ? 'light' : 'dark'} />
     </SafeAreaView>
   );
