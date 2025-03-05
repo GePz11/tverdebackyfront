@@ -109,7 +109,7 @@ export default function App() {
       {/* Sección de perfil */}
       <View style={styles.profileContainer}>
         <Image
-          source={{ uri: 'https://static-1.ivoox.com/canales/7/4/3/8/4001478748347_XXL.jpg' }}
+          source={{ uri: 'https://www.elimparcial.com/resizer/v2/2GVAZ7CRQJBFRJ7DHWENERGOW4.PNG?auth=7063740e46964db49fc6a0901a34ae8ec602536409bf266afef0c62bcc396686&smart=true&width=1200&height=1009&quality=70' }}
           style={styles.profileImage}
         />
         <Text style={[styles.name, darkMode && styles.darkText]}>Juan Pérez</Text>
