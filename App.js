@@ -10,7 +10,7 @@ const products = [
   { id: '1', name: 'EJ1', price: 'Disponible', image: 'https://www.esneca.lat/wp-content/uploads/tipos-de-frutas-1.jpg' },
   { id: '2', name: 'EJ2', price: 'Disponible', image: 'https://www.esneca.lat/wp-content/uploads/tipos-de-frutas-1.jpg' },
   { id: '3', name: 'EJ3', price: 'Disponible', image: 'https://www.esneca.lat/wp-content/uploads/tipos-de-frutas-1.jpg' },
-  { id: '4', name: 'EJ4', price: 'Disponible', image: 'https://www.esneca.lat/wp-content/uploads/tipos-de-frutas-1.jpg' },
+  { id: '4', name: 'EJ4', price: 'NO Disponible', image: 'https://www.esneca.lat/wp-content/uploads/tipos-de-frutas-1.jpg' },
 ];
 
 //particion de la aplicacion para prueba de ventana
@@ -84,7 +84,7 @@ export default function App() {
           <View style={[styles.menu, darkMode && styles.darkMenu]}>
             <TouchableOpacity onPress={toggleDarkMode}>
               <Text style={[styles.menuItem, darkMode && styles.darkMenuItem]}>
-                {darkMode ? 'Modo Claro' : 'Modo Oscuro'}
+                {darkMode ? 'Modo con privilegios' : 'Modo  Sin derechos'}
               </Text>
             </TouchableOpacity>
             <TouchableOpacity>
